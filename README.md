@@ -1,6 +1,4 @@
-
-## About Project   
-
+##**Improving Urban Security through YOLO-Based Object Detection in Surveillance Systems**
 In response to increasing security concerns, the use of camera surveillance systems has grown significantly. However, the reliance on human intervention within these systems limits their effectiveness and resilience to security threats. As a result, there is a growing need for automated mechanisms capable of detecting security anomalies, particularly through real-time video analytics. This study focuses on the detection and monitoring of theft by analyzing urban surveillance camera feeds using computer vision. Advanced deep learning architectures such as YOLOv4, YOLOv5 and YOLOv8 enable high levels of detection accuracy. For example, YOLOv8 achieves 98% detection accuracy for vehicles with hidden number plates, 99% for vehicles with visible number plates, and 97% for horse identification. By providing a comparative analysis of YOLO algorithms, this study contributes to the field of object detection in security applications. In addition, the system is designed to facilitate timely intervention in theft-related incidents and strengthen security protocols. This research advances the application of deep learning in surveillance and provides a robust framework for improving the efficiency and autonomy of urban security systems.
 
 ## Technologies Used
@@ -46,7 +44,8 @@ Some of the basic algorithms used in this project are:
 
 ## Experimental Results
 
-![image](https://github.com/user-attachments/assets/d0904e8b-ef79-4ae8-9b6a-e09e461cf875)
+![image](https://github.com/user-attachments/assets/eb899698-bae4-42f4-858f-79102867fafb)
+
 
 
 ## Usage Scenarios
@@ -73,3 +72,7 @@ python manage.py runserver
 ## Contact
 If you have any questions or feedback, please contact me:
 E-posta: buseetinn@gmail.com
+
+##Publication Info
+Posted in The Visual Computer journal
+
