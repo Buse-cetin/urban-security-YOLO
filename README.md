@@ -45,8 +45,8 @@ Some of the basic algorithms used in this project are:
 ## Experimental Results
 - YOLOv4: 95% closed plate, 98% open plate, 96% horse carriages accuracy 
 - YOLOv5: 100% closed plate, 99% open plate, 98% horse carriages accuracy 
-- YOLOv8: 98% closed plate, 99% open plate, 97% horse carriages accuracy 
-Result: YOLOv8 demonstrated the most balanced performance in terms of accuracy and speed.
+- YOLOv8: 98% closed plate, 99% open plate, 97% horse carriages accuracy
+- Result: YOLOv8 demonstrated the most balanced performance in terms of accuracy and speed.
 
 ## Usage Scenarios
 
