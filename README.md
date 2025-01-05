@@ -63,9 +63,9 @@ cd urban-security-YOLO
 
 
 ## Usage
-cd movieapp
-activate.bat
-python manage.py runserver
+- cd movieapp
+- activate.bat
+- python manage.py runserver
 
 ## Contact
 If you have any questions or feedback, please contact me:
