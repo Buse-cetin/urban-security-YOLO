@@ -1,5 +1,15 @@
-## **Improving Urban Security through YOLO-Based Object Detection in Surveillance Systems**
-In response to increasing security concerns, the use of camera surveillance systems has grown significantly. However, the reliance on human intervention within these systems limits their effectiveness and resilience to security threats. As a result, there is a growing need for automated mechanisms capable of detecting security anomalies, particularly through real-time video analytics. This study focuses on the detection and monitoring of theft by analyzing urban surveillance camera feeds using computer vision. Advanced deep learning architectures such as YOLOv4, YOLOv5 and YOLOv8 enable high levels of detection accuracy. For example, YOLOv8 achieves 98% detection accuracy for vehicles with hidden number plates, 99% for vehicles with visible number plates, and 97% for horse identification. By providing a comparative analysis of YOLO algorithms, this study contributes to the field of object detection in security applications. In addition, the system is designed to facilitate timely intervention in theft-related incidents and strengthen security protocols. This research advances the application of deep learning in surveillance and provides a robust framework for improving the efficiency and autonomy of urban security systems.
+## **Real-Time Theft Detection in Urban Surveillance: A YOLO-Based Deep Learning Approach**
+
+## Abstract
+The escalating concerns over urban security have led to the widespread deployment of camera surveillance systems. However, the reliance on human intervention limits their effectiveness and makes them vulnerable to security threats. To address this, we present an automated system for real-time theft detection using advanced YOLO (You Only Look Once) deep learning algorithms. Our study evaluates YOLOv4, YOLOv5, and
+YOLOv8 for detecting suspicious activities in surveillance footage. Notably, YOLOv8 achieves high detection accuracies of 98% for vehicles with obscured license plates, 99% for those with visible plates, and 97%
+for horse-drawn carriages. Through comparative analysis, we demonstrate the superiority of YOLO-based models in enhancing object detection capabilities for security applications. The proposed system facilitates
+timely intervention in theft-related incidents and strengthens overall security protocols by generating detailed data logs. This research not only advances the application of deep learning in surveillance systems
+but also provides a robust framework for enhancing the autonomy and operational efficiency of urban security infrastructure.
+
+## Description
+The code and datasets related to the paper "Real-Time Theft Detection in Urban Surveillance: A YOLO-Based Deep Learning Approach" have been made publicly available here. This work has been submitted for publication to The Visual Computer journal. You can find more details and track the paper's progress through the journal.
+ - This repository includes all the necessary resources to reproduce the results presented in the paper. Feel free to explore, contribute, and provide feedback.
 
 ## Technologies Used
 
