@@ -10,8 +10,6 @@ but also provides a robust framework for enhancing the autonomy and operational 
 ## Description
 The code and datasets related to the paper "Real-Time Theft Detection in Urban Surveillance: A YOLO-Based Deep Learning Approach" have been made publicly available here. This work has been submitted for publication to The Visual Computer journal. You can find more details and track the paper's progress through the journal.
 
-## 
-This repository includes all the necessary resources to reproduce the results presented in the paper. Feel free to explore, contribute, and provide feedback.
 
 ## Technologies Used
 
@@ -78,6 +76,9 @@ cd urban-security-YOLO
 - cd movieapp
 - activate.bat
 - python manage.py runserver
+
+## 
+This repository includes all the necessary resources to reproduce the results presented in the paper. Feel free to explore, contribute, and provide feedback.
 
 ## Contact
 If you have any questions or feedback, please contact me:
