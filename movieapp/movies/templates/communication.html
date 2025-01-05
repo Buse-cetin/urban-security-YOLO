@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gözüm ÜZerinde Benden Kaçamazsın</title>
+</head>
+
+<body>
+  {% include 'partials/_navbar.html' %}
+<!-- End Navbar --> 
+
+<!-- Banner Image -->
+
+<div class="banner text-center" data-scroll-index='0'>
+  <div style="height: 50px;" class="banner-overlay">
+    <div class="container">
+      <h1 class="text-capitalize">
+        {% for Communication in com %}
+            <li>
+                {{ Communication.title }}
+            </li>
+        {% endfor %}
+      </h1>
+  </div>
+</div>
+
+<!-- End Banner Image --> 
+<div class="contact section-padding" data-scroll-index='4'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 section-title text-center">
+          <h4 style="color: pink;">
+            {% for Communication in com %}
+            <li>
+                {{ Communication.informate }}
+            </li>
+        {% endfor %}
+          </h4>
+          <br>
+          <span class="section-title-line"></span> </div>
+        <div class="col-lg-5 col-md-4">
+          <div class="part-info">
+            <div class="info-box">
+              <div class="icon"> <i class="fas fa-phone"></i> </div>
+              <div class="content">
+                <h4>Telefon No :</h4>
+                <li style="color:orange;" ></i><a href="tel:05384751128"><h5 style="color: orange;">
+                  {% for Communication in com %}
+                  <li>
+                      {{ Communication.telephone }}
+                  </li>
+              {% endfor %}
+                </h5></a></li>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="icon"> <i class="fas fa-map-marker-alt"></i> </div>
+              <div class="content">
+                <h4>Adres :</h4>
+                <li style="color:orange;" class="address"><h5 style="color: orange;">
+                  {% for Communication in com %}
+                  <li>
+                      {{ Communication.addresss }}
+                  </li>
+              {% endfor %}
+                </h5></li>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="icon"> <i class="fas fa-envelope"></i> </div>
+              <div class="content">
+                <h4>e-mail :</h4>
+                <li style="color:orange;"  ><a href="mailto:office@aria.com"><h5 style="color: orange;">
+                  {% for Communication in com %}
+                  <li>
+                      {{ Communication.email }}
+                  </li>
+              {% endfor %}
+                </h5></a></li>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7 col-md-8">
+          <div class="contact-form">
+            <form id="style" action="https://formspree.io/f/mzbwldzz" method="POST">
+            <form class='form' id='contact-form' method='post' data-toggle='validator'>
+              <input type='hidden' name='form-name' value='contact-form' />
+              <div class="messages"></div>
+              <div class="controls">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input id="form_name" type="text" name="name" placeholder="Ad *" required data-error="name is required.">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input id="form_email" type="email" name="email" placeholder="Email *" required data-error="Valid email is required.">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <input id="form_subject" type="text" name="subject" placeholder="Konu">
+                    </div>
+                  </div>
+                  <div class="col-lg-12 form-group">
+                    <textarea id="form_message" name="message" class="form-control" placeholder=" Mesajınız " rows="4" required data-error="Please,leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="col-lg-12 text-center">
+                    <button class="bttn">Gönder</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include 'partials/_footer.html' %}
+  <!-- End Contact -->
+</body>
+</html>

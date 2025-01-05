@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gözüm ÜZerinde Benden Kaçamazsın</title>
+
+</head>
+
+<body>
+  {% include 'partials/_navbar.html' %}
+
+  
+<div class="banner text-center" data-scroll-index='0'>
+  <div style="height: 50px;" class="banner-overlay">
+    <div class="container">
+      <h1 class="text-capitalize">
+        {% for Gallery in gal %}
+                  <li>
+                      {{ Gallery.title }}
+                  </li>
+              {% endfor %}
+      </h1>
+  </div>
+</div>
+
+<!-- Gallery -->
+<div class="portfolio section-padding" data-scroll-index='3'>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 section-title text-center">
+          <h3>
+            {% for Gallery in gal %}
+                  <li>
+                      {{ Gallery.informate }}
+                  </li>
+              {% endfor %}
+          </h3>
+          <span class="section-title-line"></span> </div>
+        <div class="filtering text-center mb-30">
+          <button type="button" data-filter='*' class="active">
+            {% for Gallery in gal %}
+                  <li>
+                      {{ Gallery.subtitle_one }}
+                  </li>
+              {% endfor %}
+          </button>
+          <button type="button" data-filter='.summer'>
+            {% for Gallery in gal %}
+                  <li>
+                      {{ Gallery.subtitle_two }}
+                  </li>
+              {% endfor %}
+          </button>
+          <button type="button" data-filter='.winter'>
+            {% for Gallery in gal %}
+                  <li>
+                      {{ Gallery.subtitle_three }}
+                  </li>
+              {% endfor %}
+          </button>
+         <!-- <button type="button" data-filter='.rainy'>Rainy</button>-->
+         <!-- <button type="button" data-filter='.spring'>Spring</button>-->
+        </div>
+        <div class="gallery no-padding col-lg-12 col-sm-12">
+          <div class="col-lg-4 col-sm-6 spring no-padding">
+            <div class="item-img"> <a class="single-image" href="images/gall1.jpg"></a>
+              <div class="part-img"> <img src="static/img/images/gall1.jpg" alt="image">
+                <div class="overlay-img">
+                  <h4>Spring</h4>
+                  <h6>Autumn Leaves</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 spring no-padding">
+            <div class="item-img"> <a class="single-image" href="images/gall2.jpg"></a>
+              <div class="part-img"> <img src="static/img/images/gall2.jpg" alt="image">
+                <div class="overlay-img">
+                  <h4>Spring</h4>
+                  <h6>Flower Pot</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 spring no-padding">
+            <div class="item-img"> <a class="single-image" href="images/gall3.jpg"></a>
+              <div class="part-img"> <img src="static/img/images/gall3.jpg" alt="image">
+                <div class="overlay-img">
+                  <h4>Spring</h4>
+                  <h6>Bird with Flower</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 summer no-padding">
+            <div class="item-img"> <a class="single-image" href="images/gall4.jpg"></a>
+              <div class="part-img"> <img src="static/img/images/gall4.jpg" alt="image">
+                <div class="overlay-img">
+                  <h4>Summer</h4>
+                  <h6>Vacation Trip Van</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 winter no-padding">
+            <div class="item-img"> <a class="single-image" href="images/gall5.jpg"></a>
+              <div class="part-img"> <img src="static/img/images/gall5.jpg" alt="image">
+                <div class="overlay-img">
+                  <h4>Winter</h4>
+                  <h6>Girl in the snow</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 rainy no-padding">
+            <div class="item-img"> <a class="single-image" href="images/gall6.jpg"></a>
+              <div class="part-img"> <img src="static/img/images/gall6.jpg" alt="image">
+                <div class="overlay-img">
+                  <h4>Rainy</h4>
+                  <h6>Man with an Umberalla</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 summer no-padding">
+            <div class="item-img"> <a class="single-image" href="images/gall7.jpg"></a>
+              <div class="part-img"> <img src="static/img/images/gall7.jpg" alt="image">
+                <div class="overlay-img">
+                  <h4>Summer</h4>
+                  <h6>New Beginning</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 rainy no-padding">
+            <div class="item-img"> <a class="single-image" href="images/gall8.jpg"></a>
+              <div class="part-img"> <img src="static/img/images/gall8.jpg" alt="image">
+                <div class="overlay-img">
+                  <h4>Rainy</h4>
+                  <h6>Girl in the Rain</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 summer no-padding">
+            <div class="item-img"> <a class="single-image" href="images/gall9.jpg"></a>
+              <div class="part-img"> <img src="static/img/images/gall9.jpg" alt="image">
+                <div class="overlay-img">
+                  <h4>Summer</h4>
+                  <h6>Fun at the Seashores</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Gallery -->
+  {% include 'partials/_footer.html' %}
+</body>
+</html>

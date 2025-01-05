@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.css">
+
+</head>
+<body>
+  {% include 'partials/_navbar.html' %}
+<!-- End Navbar --> 
+
+<!-- Banner Image -->
+
+<div class="banner text-center" data-scroll-index='0'>
+  <div class="banner-overlay" style="background:linear-gradient(to bottom,  rgb(192, 82, 104) 0%, rgb(255, 228, 192) 100%);">
+    <div class="container">
+      <h1 class="text-white margin-bottom-30 text-size-60 text-m-size-30 text-line-height-1">
+        {% for About_Information in info %}
+                <li>
+                    {{ About_Information.title }}
+                </li>
+            {% endfor %}        
+      </h1>
+      <div class="s-12 m-10 l-8 center"><p class="text-white text-size-14 margin-bottom-40">
+          {% for About_Information in info %}
+          <li>
+              {{ About_Information.informate }}
+          </li>
+      {% endfor %}
+        </p> </div>
+      <a href="/about" class="banner-btn">Daha Fazla Bilgi Al</a> </div>
+  </div>
+</div>
+<!-- End Banner Image --> 
+
+<!-- About -->
+
+<div class="about-us section-padding" data-scroll-index='1'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-title text-center">
+        <h3>
+          {% for Information_two in inftwo %}
+          <li>
+              {{ Information_two.title }}
+          </li>
+      {% endfor %}
+        </h3>
+       
+        <span class="section-title-line"></span> </div>
+      <div class="col-md-6 mb-50">
+        <div class="section-info">
+          <div class="sub-title-paragraph">
+            <h4>
+              {% for Information_two in inftwo %}
+          <li>
+              {{ Information_two.subtitle }}
+          </li>
+      {% endfor %} </h4>
+            <h5>{% for Information_two in inftwo %}
+              <li>
+                  {{ Information_two.info }}
+              </li>
+              <br>
+          {% endfor %}</h5>
+          <p style="color:black;">{% for Information_two in inftwo %}
+            <li>
+                {{ Information_two.informate }}
+            </li>
+        {% endfor %}</p>
+          </div>
+          <a style="width: 200px;  height: 50px;"  href="/about" class="anchor-btn">
+            {% for Information_two in inftwo %}
+          <li>
+              {{ Information_two.button }}
+          </li>
+      {% endfor %} <i class="fas fa-arrow-right pd-lt-10"></i></a> </div>
+      </div>
+      <div class="col-md-6 mb-50">
+        <div class="section-img"> <img style="width: 580px; height: 330px;"  src="static/img/otomatikUyari.jpg " alt="" class="img-responsive"/> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End About --> 
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+          <div id="testimonial-slider" class="owl-carousel">
+              <div class="testimonial">
+                  <div class="pic">
+                    {% for testimonial in tes %}
+                    <li>
+                      <img src="{{ testimonial.imageUrl_one.url }}" alt="Testimonial Image">
+                    </li>
+                  {% endfor %}
+                  </div>
+                  <div class="testimonial-content">
+                      <p class="description">
+                        {% for Testimonial in tes %}
+                        <li>
+                            {{ Testimonial.informate_one }}
+                        </li>
+                    {% endfor %}
+                      </p>
+                      <h3 class="testimonial-title">
+                          <small class="post">
+                            {% for Testimonial in tes %}
+                            <li>
+                                {{ Testimonial.title_one }}
+                            </li>
+                        {% endfor %}
+                          </small>
+                      </h3>
+                  </div>
+              </div>
+
+              <div class="testimonial">
+                  <div class="pic">
+                    {% for testimonial in tes %}
+                    <li>
+                      <img src="{{ testimonial.imageUrl_five.url }}" alt="Testimonial Image">
+                    </li>
+                  {% endfor %}
+                  </div>
+                  <div class="testimonial-content">
+                      <p class="description">
+                        {% for Testimonial in tes %}
+                        <li>
+                            {{ Testimonial.informate_five }}
+                        </li>
+                    {% endfor %}
+                      </p>
+                      <h3 class="testimonial-title">
+                          <small class="post">
+                            {% for Testimonial in tes %}
+                            <li>
+                                {{ Testimonial.title_five }}
+                            </li>
+                        {% endfor %}</small>
+                      </h3>
+                  </div>
+              </div>
+              <div class="testimonial">
+                <div class="pic">
+                    {% for testimonial in tes %}
+                    <li>
+                      <img src="{{ testimonial.imageUrl_two.url }}" alt="Testimonial Image">
+                    </li>
+                  {% endfor %}
+                </div>
+                <div class="testimonial-content">
+                    <p class="description">
+                      {% for Testimonial in tes %}
+                        <li>
+                            {{ Testimonial.informate_two }}
+                        </li>
+                    {% endfor %}
+                      </p>
+                      <h3 class="testimonial-title">
+                          <small class="post">
+                            {% for Testimonial in tes %}
+                            <li>
+                                {{ Testimonial.title_two }}
+                            </li>
+                        {% endfor %}
+                        </small>
+                    </h3>
+                </div>
+            </div>
+            <div class="testimonial">
+              <div class="pic">
+                {% for testimonial in tes %}
+                <li>
+                  <img src="{{ testimonial.imageUrl_three.url }}" alt="Testimonial Image">
+                </li>
+              {% endfor %}
+              </div>
+              <div class="testimonial-content">
+                  <p class="description">{% for Testimonial in tes %}
+                    <li>
+                        {{ Testimonial.informate_three }}
+                    </li>
+                {% endfor %}
+                  </p>
+                  <h3 class="testimonial-title">
+                      <small class="post">
+                        {% for Testimonial in tes %}
+                        <li>
+                            {{ Testimonial.title_three }}
+                        </li>
+                    {% endfor %}</small>
+                  </h3>
+              </div>
+          </div>
+          <div class="testimonial">
+            <div class="pic">
+                {% for testimonial in tes %}
+                  <li>
+                    <img src="{{ testimonial.imageUrl_four.url }}" alt="Testimonial Image">
+                  </li>
+                {% endfor %}
+              </div>
+            <div class="testimonial-content">
+                <p class="description">
+                  {% for Testimonial in tes %}
+                  <li>
+                      {{ Testimonial.informate_four }}
+                  </li>
+              {% endfor %}
+                </p>
+                <h3 class="testimonial-title">
+                    <small class="post">
+                      {% for Testimonial in tes %}
+                      <li>
+                          {{ Testimonial.title_four }}
+                      </li>
+                  {% endfor %}</small>
+                </h3>
+            </div>
+        </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Testimonial End -->
+<!-- Services -->
+<div class="services section-padding bg-grey" data-scroll-index='2'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-title text-center">
+        <h3>
+          {% for Services in ser %}
+                      <li>
+                          {{ Services.title }}
+                      </li>
+                  {% endfor %}
+        </h3>
+        <p>
+          {% for Services in ser %}
+                      <li>
+                          {{ Services.informate }}
+                      </li>
+                  {% endfor %}
+        </p>
+        <span class="section-title-line"></span> </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-30">
+        <div class="service-box bg-white text-center">
+          <div class="icon"> <i class="fas fa-bullhorn"></i> </div>
+          <div class="icon-text">
+            <h4 class="title-box">
+              {% for Services in ser %}
+              <li>
+                  {{ Services.title_one }}
+              </li>
+          {% endfor %}</h4>
+            <p>
+              {% for Services in ser %}
+              <li>
+                  {{ Services.informate_one }}
+              </li>
+          {% endfor %}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-30">
+        <div class="service-box bg-white text-center">
+          <div class="icon"> <i class="far fa-comment "></i> </div>
+          <div class="icon-text">
+            <h4 class="title-box">
+              {% for Services in ser %}
+              <li>
+                  {{ Services.title_two }}
+              </li>
+          {% endfor %}</h4>
+            <p>
+              {% for Services in ser %}
+              <li>
+                  {{ Services.informate_two }}
+              </li>
+          {% endfor %}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-30">
+        <div class="service-box bg-white text-center">
+          <div class="icon"> <i class="	fas fa-bell"></i> </div>
+          <div class="icon-text">
+            <h4 class="title-box">
+              {% for Services in ser %}
+              <li>
+                  {{ Services.title_three }}
+              </li>
+          {% endfor %}</h4>
+            <p>
+              {% for Services in ser %}
+              <li>
+                  {{ Services.informate_three }}
+              </li>
+          {% endfor %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Services --> 
+
+
+
+<!-- Gallery -->
+<div class="portfolio section-padding" data-scroll-index='3'>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 section-title text-center">
+        <h3>
+          {% for Gallery in gal %}
+                <li>
+                    {{ Gallery.informate }}
+                </li>
+            {% endfor %}
+        </h3>
+        <p>Vestibulum elementum dui tempus dolor gravida, vel mattis erat fermentum.</p>
+        <span class="section-title-line"></span> </div>
+      <div class="filtering text-center mb-30">
+        <button type="button" data-filter='*' class="active">
+          {% for Gallery in gal %}
+                <li>
+                    {{ Gallery.subtitle_one }}
+                </li>
+            {% endfor %}
+        </button>
+        <button type="button" data-filter='.summer'>
+          {% for Gallery in gal %}
+                <li>
+                    {{ Gallery.subtitle_two }}
+                </li>
+            {% endfor %}
+        </button>
+        <button type="button" data-filter='.winter'>
+          {% for Gallery in gal %}
+                <li>
+                    {{ Gallery.subtitle_three }}
+                </li>
+            {% endfor %}
+        </button>
+       <!-- <button type="button" data-filter='.rainy'>Rainy</button>-->
+       <!-- <button type="button" data-filter='.spring'>Spring</button>-->
+      </div>
+      <div class="gallery no-padding col-lg-12 col-sm-12">
+        <div class="col-lg-4 col-sm-6 summer no-padding">
+          <div class="item-img"> <a class="single-image" href="images/gall1.jpg"></a>
+            <div class="part-img"> <img style="width: 580px; height: 380px;" src="static/img/images/g1.png" alt="image">
+              <div class="overlay-img">
+                <h6>At Tespiti</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 winter no-padding">
+          <div class="item-img"> <a class="single-image" href="images/gall2.jpg"></a>
+            <div class="part-img"> <img style="width: 580px; height: 380px;" src="static/img/images/g15.png" alt="image">
+              <div class="overlay-img">
+                <h6>Kapalı Plaka Tespiti</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 winter no-padding">
+          <div class="item-img"> <a class="single-image" href="images/gall3.jpg"></a>
+            <div class="part-img"> <img style="width: 580px; height: 380px;" src="static/img/images/g8.png" alt="image">
+              <div class="overlay-img">
+                <h6>Açık Plaka Tespiti</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 winter no-padding">
+          <div class="item-img"> <a class="single-image" href="images/gall4.jpg"></a>
+            <div class="part-img"> <img style="width: 580px; height: 380px;" src="static/img/images/g12.png" alt="image">
+              <div class="overlay-img">
+                <h6>Açık Plaka Tespiti</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 summer no-padding">
+          <div class="item-img"> <a class="single-image" href="images/gall5.jpg"></a>
+            <div class="part-img"> <img style="width: 580px; height: 380px;" src="static/img/images/g23.png" alt="image">
+              <div class="overlay-img">
+                <h6>At Tespiti</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 summer no-padding">
+          <div class="item-img"> <a class="single-image" href="images/gall6.jpg"></a>
+            <div class="part-img"> <img style="width: 580px; height: 380px;" src="static/img/images/g5.png" alt="image">
+              <div class="overlay-img">
+                <h6>At Tespiti</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 summer no-padding">
+          <div class="item-img"> <a class="single-image" href="images/gall7.jpg"></a>
+            <div class="part-img"> <img style="width: 580px; height: 380px;" src="static/img/images/g6.png" alt="image">
+              <div class="overlay-img">
+                <h6>At Tespiti</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 winter no-padding">
+          <div class="item-img"> <a class="single-image" href="images/gall8.jpg"></a>
+            <div class="part-img"> <img style="width: 580px; height: 380px;" src="static/img/images/g9.png" alt="image">
+              <div class="overlay-img">
+                <h6>Açık Plaka Tespiti</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 winter no-padding"> 
+          <div class="item-img"> <a class="single-image" href="images/gall9.jpg"></a>
+            <div class="part-img"> <img style="width: 580px; height: 380px;" src="static/img/images/g10.png" alt="image">
+              <div class="overlay-img">
+                <h6>Açık Plaka Tespiti</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Gallery -->
+<!-- End Testimonials -->
+
+{% include 'partials/_footer.html' %}
+
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+</html>

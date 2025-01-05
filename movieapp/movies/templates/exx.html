@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gözüm ÜZerinde Benden Kaçamazsın</title>
+<style>
+  .image-container {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .image-container img {
+      width: 530px;
+      height: 480px;
+      margin: 10px; /* İstediğiniz boşluk değerini ayarlayabilirsiniz */
+  }
+</style>
+</head>
+
+<body>
+  {% include 'partials/_navbar.html' %}
+<!-- End Navbar --> 
+
+<!-- Banner Image -->
+
+<div class="banner text-center" data-scroll-index='0'>
+  <div style="height: 50px;" class="banner-overlay">
+    <div class="container">
+      <h1 class="text-capitalize">
+        {% for Communication in com %}
+            <li>
+                {{ Communication.title }}
+            </li>
+        {% endfor %}
+      </h1>
+  </div>
+</div>
+
+<!-- End Banner Image --> 
+<div class="contact section-padding" data-scroll-index='4'>
+    <div class="container">
+      
+      <body>
+        <div class="image-container">
+            <img src="{% url 'video_feed' %}" width="480" height="480" />
+            <img src="{% url 'video_feed' %}" width="480" height="480" />
+            <img src="{% url 'video_feed' %}" width="480" height="480" />
+            <img src="{% url 'video_feed' %}" width="480" height="480" />
+            
+            
+        </div>
+    </body>
+
+
+      
+
+      </div>
+    </div>
+  </div>
+  {% include 'partials/_footer.html' %}
+  <!-- End Contact -->
+</body>
+</html>

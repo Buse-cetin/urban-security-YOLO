@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Giriş Yapınız</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="static/img/images_login/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/vendor_login/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/fonts_login/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/vendor_login/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="static/vendor/vendor_login/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/vendor_login/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/css_login/util.css">
+	<link rel="stylesheet" type="text/css" href="static/css/css_login/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div style="width: 400px; height: 650px;" class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img  src="static/img/LOGO.png" alt="IMG">
+				</div>
+				<form method="POST">
+					{% csrf_token %}
+					{% if error %}
+						<div class="alert alert-warning">
+							{{error}}
+						</div>
+					{% endif %}
+					<span class="login100-form-title">
+						Gözüm Üzerinde!
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Geçerli bir e-posta adresi giriniz: ex@abc.xyz">
+						<!--<div class=mb-3> -->
+							<input type="text" name="username" id="username" class="input100" placeholder="Kullanıcı Adı" required>
+							<span class="focus-input100"></span>
+						<!--</div>-->
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Şifrenizi Giriniz">
+						<div class=mb-3>
+							<input type="password" name="password" id="password" class="input100" placeholder="Sifre" required>
+							<span class="focus-input100"></span>					
+						
+				</form>
+				<div class="container-login100-form-btn">
+				<input type="submit" value="Gİrİş Yap" class="login100-form-btn">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="static/vendor/vendor_login/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/vendor_login/bootstrap/js/popper.js"></script>
+	<script src="static/vendor/vendor_login/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/vendor_login/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/vendor_login/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="static/js/js_login/main.js"></script>
+
+</body>
+</html>

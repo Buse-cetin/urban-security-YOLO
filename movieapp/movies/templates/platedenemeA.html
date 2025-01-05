@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html>
+
+<html lang="tr" dir="ltr">
+<head>
+<title>Değiştirmek için Plaka seçin | Django site yöneticisi</title>
+<link rel="stylesheet" href="/static/admin/css/base.css">
+
+  <link rel="stylesheet" href="/static/admin/css/dark_mode.css">
+  <script src="/static/admin/js/theme.js" defer></script>
+
+
+  <link rel="stylesheet" href="/static/admin/css/nav_sidebar.css">
+  <script src="/static/admin/js/nav_sidebar.js" defer></script>
+
+
+  
+  <link rel="stylesheet" href="/static/admin/css/changelists.css">
+  
+  
+    <script src="/admin/jsi18n/"></script>
+  
+  
+  
+
+
+
+
+<script src="/static/admin/js/vendor/jquery/jquery.js"></script>
+<script src="/static/admin/js/jquery.init.js"></script>
+<script src="/static/admin/js/core.js"></script>
+<script src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script src="/static/admin/js/actions.js"></script>
+<script src="/static/admin/js/urlify.js"></script>
+<script src="/static/admin/js/prepopulate.js"></script>
+<script src="/static/admin/js/vendor/xregexp/xregexp.js"></script>
+<script src="/static/admin/js/filters.js" defer></script>
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" app-movies model-plate change-list"
+  data-admin-utc-offset="0">
+<a href="#content-start" class="skip-to-content-link">Ana içeriğe atla</a>
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="/admin/">Django yönetimi</a></h1>
+
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Hoş Geldiniz,
+                <strong>admin</strong>.
+            
+            
+                
+                    <a href="/">Siteyi göster</a> /
+                
+                
+                    
+                    
+                
+                
+                <a href="/admin/password_change/">Parolayı değiştir</a> /
+                
+                <form id="logout-form" method="post" action="/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="Il2iJzNcHR9QjT6r0cPULsTVJBXDhEZfB5xCpTmsmK94TndtVlIuS0Z7utFTHOkJ">
+                    <button type="submit">Oturumu kapat</button>
+                </form>
+                
+<button class="theme-toggle">
+  <div class="visually-hidden theme-label-when-auto">Temayı değiştir (şu anki tema: otomatik)</div>
+  <div class="visually-hidden theme-label-when-light">Temayı değiştir (şu anki tema: açık)</div>
+  <div class="visually-hidden theme-label-when-dark">Temayı değiştir (şu anki tema: koyu)</div>
+  <svg aria-hidden="true" class="theme-icon-when-auto">
+    <use xlink:href="#icon-auto" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-dark">
+    <use xlink:href="#icon-moon" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-light">
+    <use xlink:href="#icon-sun" />
+  </svg>
+</button>
+
+            
+        </div>
+        
+        
+        
+    </div>
+    
+    <!-- END Header -->
+    
+      <nav aria-label="İçerik haritaları">
+        
+<div class="breadcrumbs">
+<a href="/admin/">Giriş</a>
+&rsaquo; <a href="/admin/movies/">Movies</a>
+&rsaquo; Plakalr
+</div>
+
+      </nav>
+    
+    
+
+    <div class="main" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Gezinmeyi aç/kapat"></button>
+<nav class="sticky" id="nav-sidebar" aria-label="Kenar çubuğu">
+  <input type="search" id="nav-filter"
+         placeholder="Süzmek için yazmaya başlayın..."
+         aria-label="Gezinti öğelerini süz">
+  
+
+
+  
+    <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="/admin/auth/" class="section" title="Kimlik Doğrulama ve Yetkilendirme uygulamasındaki modeller">Kimlik Doğrulama ve Yetkilendirme</a>
+        </caption>
+        
+          <tr class="model-group">
+            
+              <th scope="row"><a href="/admin/auth/group/">Gruplar</a></th>
+            
+
+            
+              <td><a href="/admin/auth/group/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-user">
+            
+              <th scope="row"><a href="/admin/auth/user/">Kullanıcılar</a></th>
+            
+
+            
+              <td><a href="/admin/auth/user/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-movies module current-app">
+      <table>
+        <caption>
+          <a href="/admin/movies/" class="section" title="Movies uygulamasındaki modeller">Movies</a>
+        </caption>
+        
+          <tr class="model-information_two">
+            
+              <th scope="row"><a href="/admin/movies/information_two/">Bilgi Sayfası 2</a></th>
+            
+
+            
+              <td><a href="/admin/movies/information_two/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-about_information">
+            
+              <th scope="row"><a href="/admin/movies/about_information/">Bilgiler</a></th>
+            
+
+            
+              <td><a href="/admin/movies/about_information/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-team_members">
+            
+              <th scope="row"><a href="/admin/movies/team_members/">Ekip Üyeleri</a></th>
+            
+
+            
+              <td><a href="/admin/movies/team_members/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-example">
+            
+              <th scope="row"><a href="/admin/movies/example/">Examples</a></th>
+            
+
+            
+              <td><a href="/admin/movies/example/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-gallery">
+            
+              <th scope="row"><a href="/admin/movies/gallery/">Galeri</a></th>
+            
+
+            
+              <td><a href="/admin/movies/gallery/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-information">
+            
+              <th scope="row"><a href="/admin/movies/information/">Hakkımızda Bilgi Sayfası</a></th>
+            
+
+            
+              <td><a href="/admin/movies/information/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-ip">
+            
+              <th scope="row"><a href="/admin/movies/ip/">Ips</a></th>
+            
+
+            
+              <td><a href="/admin/movies/ip/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-user">
+            
+              <th scope="row"><a href="/admin/movies/user/">Kişiler</a></th>
+            
+
+            
+              <td><a href="/admin/movies/user/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-message">
+            
+              <th scope="row"><a href="/admin/movies/message/">Mesajlar</a></th>
+            
+
+            
+              <td><a href="/admin/movies/message/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-other">
+            
+              <th scope="row"><a href="/admin/movies/other/">Others</a></th>
+            
+
+            
+              <td><a href="/admin/movies/other/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-plate current-model">
+            
+              <th scope="row"><a href="/admin/movies/plate/" aria-current="page">Plakalr</a></th>
+            
+
+            
+              <td><a href="/admin/movies/plate/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-services">
+            
+              <th scope="row"><a href="/admin/movies/services/">Servisler</a></th>
+            
+
+            
+              <td><a href="/admin/movies/services/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-testimonial">
+            
+              <th scope="row"><a href="/admin/movies/testimonial/">Testimonial</a></th>
+            
+
+            
+              <td><a href="/admin/movies/testimonial/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-communication">
+            
+              <th scope="row"><a href="/admin/movies/communication/">İletişim Bilgileri</a></th>
+            
+
+            
+              <td><a href="/admin/movies/communication/add/" class="addlink">Ekle</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <div id="content-start" class="content" tabindex="-1">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="">
+          
+          <h1>Değiştirmek için Plaka seçin</h1>
+          
+          
+  <div id="content-main">
+    
+        <ul class="object-tools">
+          
+            
+
+
+  
+  <li>
+    
+    <a href="/admin/movies/plate/add/" class="addlink">
+      Plaka ekle
+    </a>
+  </li>
+  
+
+
+          
+        </ul>
+    
+    
+    <div class="module filtered" id="changelist">
+      <div class="changelist-form-container">
+        
+
+<div id="toolbar"><form id="changelist-search" method="get">
+<div><!-- DIV needed for valid HTML -->
+<label for="searchbar"><img src="/static/admin/img/search.svg" alt="Search"></label>
+<input type="text" size="40" name="q" value="" id="searchbar">
+<input type="submit" value="Ara">
+
+
+</div>
+
+</form></div>
+
+
+        
+
+        <form id="changelist-form" method="post" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="Il2iJzNcHR9QjT6r0cPULsTVJBXDhEZfB5xCpTmsmK94TndtVlIuS0Z7utFTHOkJ">
+        
+
+        
+          
+<div class="actions">
+  
+    
+    <label>Eylem: <select name="action" required>
+  <option value="" selected>---------</option>
+
+  <option value="delete_selected">Seçili Plakalr nesnelerini sil</option>
+
+</select></label><input type="hidden" name="select_across" value="0" class="select-across">
+    
+    
+    <button type="submit" class="button" title="Seçilen eylemi çalıştır" name="index" value="0">Git</button>
+    
+    
+    
+        <span class="action-counter" data-actions-icnt="7">0 / 7 nesne seçildi</span>
+        
+    
+    
+  
+</div>
+
+          
+
+
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+
+<th scope="col" class="action-checkbox-column">
+   
+   <div class="text"><span><input type="checkbox" id="action-toggle"></span></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="sortable column-plaka_numarasi">
+   
+   <div class="text"><a href="?o=1">Plaka numarasi</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="sortable column-tarih">
+   
+   <div class="text"><a href="?o=2">Tarih</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="sortable column-saat">
+   
+   <div class="text"><a href="?o=3">Saat</a></div>
+   <div class="clear"></div>
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="16" class="action-select"></td><th class="field-plaka_numarasi"><a href="/admin/movies/plate/16/change/">734 8ST €07</a></th><td class="field-tarih nowrap">27 Kasım 2023</td><td class="field-saat nowrap">16:10</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="13" class="action-select"></td><th class="field-plaka_numarasi"><a href="/admin/movies/plate/13/change/">34 18T .007</a></th><td class="field-tarih nowrap">27 Kasım 2023</td><td class="field-saat nowrap">11:00</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="11" class="action-select"></td><th class="field-plaka_numarasi"><a href="/admin/movies/plate/11/change/">34 I8T .007</a></th><td class="field-tarih nowrap">27 Kasım 2023</td><td class="field-saat nowrap">10:51</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="10" class="action-select"></td><th class="field-plaka_numarasi"><a href="/admin/movies/plate/10/change/">34 IST 007</a></th><td class="field-tarih nowrap">27 Kasım 2023</td><td class="field-saat nowrap">10:47</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="5" class="action-select"></td><th class="field-plaka_numarasi"><a href="/admin/movies/plate/5/change/">[H9B2 FKL</a></th><td class="field-tarih nowrap">25 Kasım 2023</td><td class="field-saat nowrap">22:15</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3" class="action-select"></td><th class="field-plaka_numarasi"><a href="/admin/movies/plate/3/change/">54CS 1095</a></th><td class="field-tarih nowrap">22 Kasım 2023</td><td class="field-saat nowrap">13:38</td></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2" class="action-select"></td><th class="field-plaka_numarasi"><a href="/admin/movies/plate/2/change/">H9B2 FKL</a></th><td class="field-tarih nowrap">22 Kasım 2023</td><td class="field-saat nowrap">13:36</td></tr>
+
+</tbody>
+</table>
+</div>
+
+
+          
+        
+        
+
+<p class="paginator">
+
+7 Plakalr
+
+
+</p>
+
+        </form>
+      </div>
+      
+        
+          <div id="changelist-filter">
+            <h2>Süz</h2>
+            
+            
+<details data-filter-title="plaka numarasi" open>
+  <summary>
+     plaka numarasi süzgecine göre
+  </summary>
+  <ul>
+  
+    <li class="selected">
+    <a href="?">Tümü</a></li>
+  
+    <li>
+    <a href="?plaka_numarasi=34+18T+.007">34 18T .007</a></li>
+  
+    <li>
+    <a href="?plaka_numarasi=34+I8T+.007">34 I8T .007</a></li>
+  
+    <li>
+    <a href="?plaka_numarasi=34+IST+007">34 IST 007</a></li>
+  
+    <li>
+    <a href="?plaka_numarasi=54CS+1095">54CS 1095</a></li>
+  
+    <li>
+    <a href="?plaka_numarasi=734+8ST+%E2%82%AC07">734 8ST €07</a></li>
+  
+    <li>
+    <a href="?plaka_numarasi=H9B2+FKL">H9B2 FKL</a></li>
+  
+    <li>
+    <a href="?plaka_numarasi=%5BH9B2+FKL">[H9B2 FKL</a></li>
+  
+  </ul>
+</details>
+
+<details data-filter-title="tarih" open>
+  <summary>
+     tarih süzgecine göre
+  </summary>
+  <ul>
+  
+    <li class="selected">
+    <a href="?">Herhangi bir tarih</a></li>
+  
+    <li>
+    <a href="?tarih__gte=2023-11-28&amp;tarih__lt=2023-11-29">Bugün</a></li>
+  
+    <li>
+    <a href="?tarih__gte=2023-11-21&amp;tarih__lt=2023-11-29">Son 7 gün</a></li>
+  
+    <li>
+    <a href="?tarih__gte=2023-11-01&amp;tarih__lt=2023-12-01">Bu ay</a></li>
+  
+    <li>
+    <a href="?tarih__gte=2023-01-01&amp;tarih__lt=2024-01-01">Bu yıl</a></li>
+  
+  </ul>
+</details>
+
+<details data-filter-title="saat" open>
+  <summary>
+     saat süzgecine göre
+  </summary>
+  <ul>
+  
+    <li class="selected">
+    <a href="?">Tümü</a></li>
+  
+    <li>
+    <a href="?saat=10%3A47%3A00">10:47:00</a></li>
+  
+    <li>
+    <a href="?saat=10%3A51%3A00">10:51:00</a></li>
+  
+    <li>
+    <a href="?saat=11%3A00%3A00">11:00:00</a></li>
+  
+    <li>
+    <a href="?saat=13%3A36%3A00">13:36:00</a></li>
+  
+    <li>
+    <a href="?saat=13%3A38%3A00">13:38:00</a></li>
+  
+    <li>
+    <a href="?saat=16%3A10%3A00">16:10:00</a></li>
+  
+    <li>
+    <a href="?saat=22%3A15%3A00">22:15:00</a></li>
+  
+  </ul>
+</details>
+
+          </div>
+        
+      
+    </div>
+  </div>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
+</svg>
+<!-- END SVGs -->
+</body>
+</html>

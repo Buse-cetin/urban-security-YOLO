@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gözüm Üzerinde Benden Kaçamazsın</title>
+<!-- Add these CSS links in the head section of your HTML -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+<style>
+    /* Add this CSS to set the size of the slider images */
+    .slider img {
+        width: 600px;
+        height: 400px;
+    }
+</style>
+
+
+</head>
+
+<body>
+  {% include 'partials/_navbar.html' %}
+<!-- End Navbar --> 
+
+<!-- Banner Image -->
+
+<div class="banner text-center" data-scroll-index='0'>
+  <div style="height: 50px;" class="banner-overlay">
+    <div class="container">
+      <h1 class="text-capitalize">
+        {% for Information in info %}
+                  <li>
+                      {{ Information.button }}
+                  </li>
+              {% endfor %}
+      </h1>
+  </div>
+</div>
+
+<!-- End Banner Image --> 
+
+<div class="contact section-padding" data-scroll-index='4'>
+    <div class="container">
+        <div class="row">
+            <!-- Text Section -->
+            <div class="col-lg-6 col-sm-6">
+                <div class="gallery no-padding">
+                    
+                <h2 class="display-5 mb-5" style="color:Black;">Proje Hakkında</h2>
+                    <!-- Updated: Use h2 tag for the title 
+                    <h3 style=" text-align: center;">
+                        {% for Information in info %}
+                  <li>
+                      {{ Information.title }}
+                  </li>
+              {% endfor %}-->
+              <br>
+                    </h3>
+                    <h5 style="color: #333;; text-align: justify;">
+                        {% for Information in info %}
+                  <li>
+                      {{ Information.informate }}
+                  </li>
+              {% endfor %}
+                </h5>
+                </div>
+            </div>
+            <!-- Image Section -->
+           
+            <div class="col-lg-6 col-sm-6">
+                <div class="gallery no-padding">
+                    <div class="slider">
+                        <div class="part-img">
+                            <br><br><br><br><br>
+                            <img src="static/img/images/g1.png" alt="image">
+                        </div>
+                        <div class="part-img">
+                            <br><br><br><br><br>
+                            <img src="static/img/images/g12.png" alt="image">
+                        </div>
+                        <div class="part-img">
+                            <br><br><br><br><br>
+                            <img src="static/img/images/g14.png" alt="image">
+                        </div>
+                        <!-- Add more images as needed -->
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
+
+
+    <!-- Testimonial Start -->
+    <div class="contact section-padding" data-scroll-index='4'>
+        <div class="container">
+            <!-- Add the heading for "Projelerin Önemi" here -->
+                <h2 class="display-5 mb-5" style="color:Black;">Projenin Önemi</h2>
+            
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- The rest of your carousel code remains the same -->
+                    <div class="carousel-item active">
+                        <div class="carousel-caption">
+                            <div id="image-caption"><h5>
+                                {% for Testimonial in tes %}
+                                <li>
+                                    {{ Testimonial.title_one }}
+                                </li>
+                            {% endfor %}
+                            </h5><br> 
+                            {% for Testimonial in tes %}
+                            <li>
+                                {{ Testimonial.informate_one }}
+                            </li>
+                        {% endfor %}</div>
+                        {% for testimonial in tes %}
+                                <li>
+                                  <img src="{{ testimonial.imageUrl_one.url }}" alt="Testimonial Image" class="img-fluid">
+                                </li>
+                              {% endfor %}
+                        </div>   
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <div id="image-caption"><h5>
+                                {% for Testimonial in tes %}
+                                <li>
+                                    {{ Testimonial.title_two }}
+                                </li>
+                            {% endfor %}
+                            </h5> <br><br>
+                            {% for Testimonial in tes %}
+                            <li>
+                                {{ Testimonial.informate_two }}
+                            </li>
+                        {% endfor %}</div>
+                        {% for testimonial in tes %}
+                        <li>
+                          <img src="{{ testimonial.imageUrl_two.url }}" alt="Testimonial Image" class="img-fluid">
+                        </li>
+                      {% endfor %}
+                        </div>   
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <div id="image-caption"><h5>
+                                {% for Testimonial in tes %}
+                                <li>
+                                    {{ Testimonial.title_three }}
+                                </li>
+                            {% endfor %} </h5> <br>
+                                {% for Testimonial in tes %}
+                                <li>
+                                    {{ Testimonial.informate_three }}
+                                </li>
+                            {% endfor %}</div>
+                            {% for testimonial in tes %}
+                                <li>
+                                  <img src="{{ testimonial.imageUrl_three.url }}" alt="Testimonial Image" class="img-fluid">
+                                </li>
+                              {% endfor %}
+                        </div>   
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <div id="image-caption"><h5>
+                                {% for Testimonial in tes %}
+                                <li>
+                                    {{ Testimonial.title_four }}
+                                </li>
+                            {% endfor %} </h5> <br> 
+                            {% for Testimonial in tes %}
+                            <li>
+                                {{ Testimonial.informate_four }}
+                            </li>
+                        {% endfor %}
+                        </div>
+                        {% for testimonial in tes %}
+                        <li>
+                          <img src="{{ testimonial.imageUrl_four.url }}" alt="Testimonial Image" class="img-fluid">
+                        </li>
+                      {% endfor %}
+                        </div>   
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <div id="image-caption"><h5>
+                                {% for Testimonial in tes %}
+                                <li>
+                                    {{ Testimonial.title_five }}
+                                </li>
+                            {% endfor %}
+                            </h5> <br> 
+                                {% for Testimonial in tes %}
+                                <li>
+                                    {{ Testimonial.informate_five }}
+                                </li>
+                            {% endfor %}
+                            </div>
+                            {% for testimonial in tes %}
+                                <li>
+                                  <img src="{{ testimonial.imageUrl_five.url }}" alt="Testimonial Image" class="img-fluid">
+                                </li>
+                              {% endfor %}
+                        </div>   
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <i class='fas fa-arrow-left'></i>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <i class='fas fa-arrow-right'></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+<!-- Testimonial End -->
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md- wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <h4 class="display-5 mb-5" style="color:Black;">Proje Yürütücüsü</h4>
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="static/img/images/black.png" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center border border-5 border-light border-top-0 p-4">
+                            <h5 class="mb-0">
+                                {% for Team_Members in team %}
+                                <li>
+                                    {{ Team_Members.name }}
+                                </li>
+                            {% endfor %}
+                            </h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center border border-1 border-light border-top-0 p-4"></div>
+                <div class="text-center border border-5 border-light border-top-0 p-4"></div>
+                <div class="text-center border border-5 border-light border-top-0 p-4"></div>
+                <div class="text-center border border-5 border-light border-top-0 p-4"></div>
+                <div class="text-center border border-5 border-light border-top-0 p-4"></div>
+                <div class="text-center border border-5 border-light border-top-0 p-4"></div>
+                <div class="text-center border border-5 border-light border-top-0 p-4"></div>
+                <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.1s" >
+                    <div class="team-item">
+                        <h4 class="display-5 mb-5" style="color:Black;">Danışman Hoca</h4>
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="static/img/images/black.png" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center border border-5 border-light border-top-0 p-4">
+                            <h5>Doç. Dr. Serdar Solak</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+  </div>
+  
+  {% include 'partials/_footer.html' %}
+  <!-- End Contact -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
+<!-- owl carousel js --> 
+<script src="static/js/owl.carousel.min.js"></script> 
+<!-- magnific-popup --> 
+<script src="static/js/jquery.fancybox.min.js"></script> 
+
+<!-- scrollIt js --> 
+<script src="static/js/scrollIt.min.js"></script> 
+
+<!-- isotope.pkgd.min js --> 
+<script src="static/js/isotope.pkgd.min.js"></script> 
+<script>
+  $(window).on("scroll",function () {
+
+      var bodyScroll = $(window).scrollTop(),
+          navbar = $(".navbar");
+
+      if(bodyScroll > 130){
+
+          navbar.addClass("nav-scroll");
+          $('.navbar-logo img').attr('src','img/images/logo-black.png');
+
+
+      }else{
+
+          navbar.removeClass("nav-scroll");
+          $('.navbar-logo img').attr('src','img/images/logo-white.png');
+
+      }
+
+  });
+
+  $(window).on("load",function (){
+
+
+
+
+
+
+
+})
+ /*navbaar kısmının kodu
+  -------------------------------------------------------*/
+$(function () {
+$( ".cover-bg" ).each(function() {
+    var attr = $(this).attr('data-image-src');
+
+    if (typeof attr !== typeof undefined && attr !== false) {
+      $(this).css('background-image', 'url('+attr+')');
+    }
+
+  });
+
+  /* sections background color from data background
+  -------------------------------------------------------*/
+  $("[data-background-color]").each(function() {
+      $(this).css("background-color", $(this).attr("data-background-color")  );
+  });
+
+
+
+
+});
+<!-- Add this JavaScript link at the end of your body section -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var slider = $('.slider');
+
+        // Initialize the Slick Carousel with the 'infinite' option set to 'true'
+        slider.slick({
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: true, // Set infinite to true for looping
+            speed: 500,
+            fade: true,
+            cssEase: 'linear'
+        });
+
+        // Add the progress bar element
+        slider.after('<div class="progress-bar"><div class="progress"></div></div>');
+
+        // Listen to the 'afterChange' event to update the progress bar
+        slider.on('afterChange', function(event, slick, currentSlide) {
+            var progress = ((currentSlide + 1) / slick.slideCount) * 100;
+            $('.progress').css('width', progress + '%');
+        });
+    });
+</script>
+
+</script>
+
+
+</script>
+</body>
+</html>

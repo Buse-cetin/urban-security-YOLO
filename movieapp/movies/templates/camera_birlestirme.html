@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Stream</title>
+</head>
+<body>
+
+<video id="video_feed" width="640" height="480" controls autoplay></video>
+
+<script>
+    // Video akışını almak için JavaScript kullanılıyor
+    var video = document.getElementById('video_feed');
+    var source = new EventSource('/video_feed/');
+
+    source.onmessage = function(event) {
+        // Her gelen çerçeve için video içeriğini güncelle
+        video.src = 'data:video/mp4;base64,' + event.data;
+    };
+</script>
+
+</body>
+</html>

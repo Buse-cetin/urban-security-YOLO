@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gözüm Üzerinde Benden Kaçamazsın</title>
+<!-- Add these CSS links in the head section of your HTML -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+<link rel="stylesheet" type="text/css" href="static/css/form_css/core.css" />
+<link rel="stylesheet" type="text/css" href="static/css/form_css/style.css" />
+<style>
+    /* Add this CSS to set the size of the slider images */
+    .slider img {
+        width: 600px;
+        height: 400px;
+    }
+</style>
+
+
+</head>
+
+<body>
+  {% include 'partials/_navbar.html' %}
+<!-- End Navbar --> 
+
+<!-- Banner Image -->
+
+<div class="banner text-center" data-scroll-index='0'>
+  <div style="height: 50px;" class="banner-overlay">
+        <h1 class="text-capitalize">Plaka Tespit Sayfası</h1>
+
+</div>
+</div>
+
+<!-- End Banner Image --> 
+<div class="contact section-padding" data-scroll-index='4'>
+    <div class="container">
+        
+        <h1 style="color:#7c7579; padding-top:40px; font-size:27px; text-align:center"> Plaka Numarasını Giriniz</h1>
+        <div class="row">
+            <form style="box-sizing: border-box; display:flex; margin-left:35%;" action ="list" method="GET">
+                <input style="text-align:center; height:30px; width:350px; border:1px #7c7579 solid;"  type="text" name="q">
+                <button style="border:1px transparent solid; height:30px; width:40px; background-color:#7c7579;" type="submit">Ara</button>
+            </form>
+            
+            <br><br><br>
+            <!-- Text Section -->
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Plaka</th>
+                        <th scope="col">Tarih</th>
+                        <th scope="col">Saat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>
+                        {% for plate in pla %}
+                            <li>
+                                {{ plate.plaka_numarasi }}
+                            </li>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {% for plate in pla %}
+                            <li>
+                                {{ plate.tarih }}
+                            </li>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {% for plate in pla %}
+                            <li>
+                                {{ plate.saat }}
+                            </li>
+                        {% endfor %}
+                    </td>
+                    </tr>
+                  </tbody>
+            </table>
+        </div>
+        <div class="container">
+            
+        <link rel="stylesheet" type="text/css" href="static/css/button.css" />
+        
+        <h1 style="color:#7c7579; padding-top:40px; font-size:20px; ">Detaylı bilgi için tıklayınız:</h1>
+        <br>
+
+                <a href="/admin/movies/plate/" class="button type--A">
+                  <div class="button__line"></div>
+                  <div class="button__line"></div>
+                  <span class="button__text">ENTRY</span>
+                  <div class="button__drow1"></div>
+                  <div class="button__drow2"></div>
+                </a>
+        </div>
+    </div>
+
+<div class="container">
+    	<!-- welcome modal start -->
+		<div class="welcome-modal">
+			<button class="welcome-modal-close">
+				<i class="bi bi-x-lg"></i>
+			</button>
+			<iframe
+				class="w-100 border-0"
+				src="https://embed.lottiefiles.com/animation/31548"
+			></iframe>
+			<div class="text-center">
+				<h3 class="h5 weight-500 text-center mb-2">
+					Güvenliğiniz Emin Ellerde!
+					<span role="img" aria-label="gratitude">❤️</span>
+				</h3>
+				<div class="pb-2">
+					<a
+						class="github-button"
+						href="https://github.com/Buse-cetin/TUBITAK"
+						data-color-scheme="no-preference: dark; light: light; dark: light;"
+						data-icon="octicon-star"
+						data-size="large"
+						data-show-count="true"
+						aria-label="Star dropways/deskapp dashboard on GitHub"
+						>GitHub Linki</a
+					>
+					
+				</div>
+			</div>
+			<div class="text-center mb-1">
+				<div>
+					<a
+						href="/communication"
+						target="_blank"
+						class="btn btn-light btn-block btn-sm"
+					>   <span class="weight-600">Bize</span>
+						<span class="text-danger weight-600">mail</span>
+						<span class="weight-600">gönderin</span>
+						<i class="fa fa-github"></i>
+					</a>
+				</div>
+				<script
+					async
+					defer="defer"
+					src="https://buttons.github.io/buttons.js"
+				></script>
+			</div>
+			<a
+				href="https://form.jotform.com/233025087590960"
+				target="_blank"
+				class="btn btn-success btn-sm mb-0 mb-md-3 w-100"
+			>
+				Değerlendirme Anketi
+				<i class="fa fa-edit"></i>
+			</a>
+			<p class="font-14 text-center mb-1 d-none d-md-block">
+				Size daha iyi hizmet sunabilmemiz için lütfen anketi doldurun veya bizimle iletişime geçin.
+			</p>
+			<div class="d-none d-md-flex justify-content-center h1 mb-0 text-danger">
+				<i class="fa fa-html5"></i>
+			</div>
+		</div>
+		<button style= "height:50px" class="welcome-modal-btn">
+			<i class="fa fa-download"></i> Görüşleriniz Bizim İçin Değerli !
+		</button>
+		<!-- welcome modal end -->
+</div>
+</div>
+
+   
+  
+  {% include 'partials/_footer.html' %}
+  <!-- End Contact -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
+<!-- owl carousel js --> 
+<script src="static/js/owl.carousel.min.js"></script> 
+<script src="static/js/layout-settings.js"></script>
+<script src="static/js/core.js"></script>
+<!-- magnific-popup --> 
+<script src="static/js/jquery.fancybox.min.js"></script> 
+
+<!-- scrollIt js --> 
+<script src="static/js/scrollIt.min.js"></script> 
+
+<!-- isotope.pkgd.min js --> 
+<script src="static/js/isotope.pkgd.min.js"></script> 
+<script>
+  $(window).on("scroll",function () {
+
+      var bodyScroll = $(window).scrollTop(),
+          navbar = $(".navbar");
+
+      if(bodyScroll > 130){
+
+          navbar.addClass("nav-scroll");
+          $('.navbar-logo img').attr('src','img/images/logo-black.png');
+
+
+      }else{
+
+          navbar.removeClass("nav-scroll");
+          $('.navbar-logo img').attr('src','img/images/logo-white.png');
+
+      }
+
+  });
+
+  $(window).on("load",function (){
+
+
+
+
+
+
+
+})
+ /*navbaar kısmının kodu
+  -------------------------------------------------------*/
+$(function () {
+$( ".cover-bg" ).each(function() {
+    var attr = $(this).attr('data-image-src');
+
+    if (typeof attr !== typeof undefined && attr !== false) {
+      $(this).css('background-image', 'url('+attr+')');
+    }
+
+  });
+
+  /* sections background color from data background
+  -------------------------------------------------------*/
+  $("[data-background-color]").each(function() {
+      $(this).css("background-color", $(this).attr("data-background-color")  );
+  });
+
+
+
+
+});
+<!-- Add this JavaScript link at the end of your body section -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src="js/main.js"></script>
+
+<script>
+    document.getElementById('show-image-button').addEventListener('click', function() {
+        // Görselin bulunduğu URL'yi alın
+        var imageUrl = "{% if pla %}{% with pla.0.plaka_gorseli.url as image_url %}{{ image_url }}{% endwith %}{% endif %}";
+
+        // Görseli gösterilecek bölüme ekleyin
+        var imageContainer = document.getElementById('image-container');
+        var imageElement = document.createElement('img');
+        imageElement.src = imageUrl;
+        imageContainer.innerHTML = ''; // Önceki görseli temizle
+        imageContainer.appendChild(imageElement);
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var slider = $('.slider');
+
+        // Initialize the Slick Carousel with the 'infinite' option set to 'true'
+        slider.slick({
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: true, // Set infinite to true for looping
+            speed: 500,
+            fade: true,
+            cssEase: 'linear'
+        });
+
+        // Add the progress bar element
+        slider.after('<div class="progress-bar"><div class="progress"></div></div>');
+
+        // Listen to the 'afterChange' event to update the progress bar
+        slider.on('afterChange', function(event, slick, currentSlide) {
+            var progress = ((currentSlide + 1) / slick.slideCount) * 100;
+            $('.progress').css('width', progress + '%');
+        });
+    });
+</script>
+
+</script>
+
+
+</script>
+</body>
+</html>
