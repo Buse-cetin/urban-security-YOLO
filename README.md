@@ -55,15 +55,11 @@ Some of the basic algorithms used in this project are:
 - Email Notification: Instant notification of suspicious situations detected to authorities
 
 ## Installation
-
-1. **Clone the Repository:**
+ **Clone the Repository:**
 
 git clone https://github.com/Buse-cetin/urban-security-YOLO.git  
 cd urban-security-YOLO
 
-2. **Install Required Libraries:**
-
-pip install -r requirements.txt
 
 
 ## Usage
