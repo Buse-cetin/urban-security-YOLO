@@ -1,7 +1,5 @@
 
-## Proje Hakkında  
-
-## Proje Hakkında  
+## Proje Hakkında    
 
 Günümüzde güvenlik sorunlarının artması, kamera güvenlik sistemlerinin gerekliliğini ve kullanımını artırmaktadır. Güvenlik sistemlerini ve kameralarını takip etmek için çeşitli programlar ve güvenlik personeli kullanılmaktadır. Çoğu yerde, kamera takibi için sürekli olarak video kaydı yapılmakta ya da sadece kameradan gelen görüntünün aktarıldığı monitörlerden izlenebilmekte ve yalnızca güvenlik sorunu oluştuğunda müdahale edilebilmektedir. Sürekli insan denetimi ihtiyacı, kamera tabanlı güvenlik izleme sistemlerinin en büyük dezavantajlarından biridir. Çünkü insanlar, sınırlı sayıda saat ekran akışına odaklanarak dikkati dağılmadan çalışabilirler.  
 
@@ -49,9 +47,8 @@ Bu projede kullanılan bazı temel algoritmalar şunlardır:
 
 ## Deneysel Sonuçlar  
 
-- YOLOv4: %95 kapalı plaka, %98 açık plaka, %96 at arabası doğruluğu 
-- YOLOv5: %100 kapalı plaka, %99 açık plaka, %98 at arabası doğruluğu
-- YOLOv8: %98 kapalı plaka, %99 açık plaka, %97 at arabası doğruluğu
+![image](https://github.com/user-attachments/assets/88266905-0738-4509-a336-f60234540820)
+
 - Sonuç: YOLOv8, doğruluk ve hız açısından en dengeli performansı sergilemiştir.
 
 ## Kullanım Senaryoları 
