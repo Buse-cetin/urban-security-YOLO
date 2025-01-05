@@ -58,8 +58,8 @@ Some of the basic algorithms used in this project are:
 
 1. **Clone the Repository:**
 
-git clone https://github.com/Buse-cetin/ComputerVisionn.git  
-cd ComputerVisionn
+git clone https://github.com/Buse-cetin/urban-security-YOLO.git  
+cd urban-security-YOLO
 
 2.**Install Required Libraries:**
 pip install -r requirements.txt
@@ -73,6 +73,6 @@ python manage.py runserver
 If you have any questions or feedback, please contact me:
 E-posta: buseetinn@gmail.com
 
-##Publication Info
+## Publication Info
 Posted in The Visual Computer journal
 
