@@ -61,8 +61,10 @@ Some of the basic algorithms used in this project are:
 git clone https://github.com/Buse-cetin/urban-security-YOLO.git  
 cd urban-security-YOLO
 
-2.**Install Required Libraries:**
+2. **Install Required Libraries:**
+
 pip install -r requirements.txt
+
 
 ## Usage
 cd movieapp
