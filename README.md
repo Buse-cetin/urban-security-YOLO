@@ -85,5 +85,5 @@ If you have any questions or feedback, please contact me:
 E-posta: buseetinn@gmail.com
 
 ## Publication Info
-Posted in The Visual Computer journal
+The journal
 
