@@ -8,7 +8,7 @@ timely intervention in theft-related incidents and strengthens overall security 
 but also provides a robust framework for enhancing the autonomy and operational efficiency of urban security infrastructure.
 
 ## Description
-The code and datasets related to the paper "Real-Time Theft Detection in Urban Surveillance: A YOLO-Based Deep Learning Approach" have been made publicly available here. This work has been submitted for publication to The Visual Computer journal. You can find more details and track the paper's progress through the journal.
+The code and datasets related to the paper "Real-Time Theft Detection in Urban Surveillance: A YOLO-Based Deep Learning Approach" have been made publicly available here. This work has been submitted for publication to The Signal, Image and Video Processing journal. You can find more details and track the paper's progress through the journal.
 
 
 ## Technologies Used
