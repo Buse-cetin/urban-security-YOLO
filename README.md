@@ -85,5 +85,5 @@ If you have any questions or feedback, please contact me:
 E-posta: buseetinn@gmail.com
 
 ## Publication Info
-The journal
+The journal The Signal, Image and Video Processing
 
